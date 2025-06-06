@@ -15,7 +15,6 @@ edge_list elist;
 edge_list spanlist;
 int Graph[MAX][MAX], n;
 
-// Function declarations
 void kruskalAlgo();
 int find(int belongs[], int vertexno);
 void applyUnion(int belongs[], int c1, int c2);
@@ -23,7 +22,6 @@ void sort();
 void print();
 void printGraph();
 
-// Kruskal's algorithm
 void kruskalAlgo() {
   int belongs[MAX], i, j, cno1, cno2;
   elist.n = 0;
@@ -68,7 +66,6 @@ void applyUnion(int belongs[], int c1, int c2) {
   }
 }
 
-// Sorting edges by weight
 void sort() {
   edge temp;
   for (int i = 1; i < elist.n; i++) {
@@ -93,7 +90,6 @@ void print() {
   printf("Total cost of MST: %d\n", cost);
 }
 
-// Print input graph matrix
 void printGraph() {
   printf("Input Graph (Adjacency Matrix):\n");
   for (int i = 0; i < n; i++) {
@@ -117,7 +113,7 @@ int main() {
     {0, 0, 2, 0, 3, 0}
   };
 
-  // Copy input to global Graph
+
   for (int i = 0; i < n; i++)
     for (int j = 0; j < n; j++)
       Graph[i][j] = tempGraph[i][j];
